@@ -20,21 +20,3 @@ or
 ~~~
 gulp prod
 ~~~
-
-And import like this
-~~~
-import versionedFileDownloader from 'versioned-file-downloader';
-~~~
-
-Call the asynchronous versionedFileDownloader and pass it the parameters shown below to save the files to a directory of the form [device document root return by Expo FileSystem API]/[package name]/[version]/
-~~~
-let downloadStatus = await versionedFileDownloader(
-    this.webViewDownloadStatusCallBack,
-    {
-        name: config.PACKAGE_NAME,          // the name of the package, this will be the root directory for the files
-        version: config.PACKAGE_VERSION,    // the version number, this will be a subfolder of the root that the file will be saved to
-        files: FILES_TO_DOWNLOAD,           // the files to be saved 
-    }
-);
-~~~
-
